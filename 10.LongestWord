@@ -1,0 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+
+
+  public  class asdasd
+    {
+       public static void Main()
+       {
+		   string text = Console.ReadLine();
+		   string[] newText =  text.Split(new char[] {' ', '.', ',', '!', '"', }, StringSplitOptions.RemoveEmptyEntries);
+		   string longestWord = newText.OrderByDescending(word => word.Length).First();
+		   Console.WriteLine(longestWord);
+	   }
+    }
