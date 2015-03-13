@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+					
+public class JoinLists
+{
+	public static void Main()
+	{
+		string firstLine = Console.ReadLine();
+		string[] firstList = firstLine.Split(' ');
+		List<int> first = new List<int> {};
+		
+		foreach (string number in firstList)
+		{
+			first.Add(int.Parse(number));
+		}
+		string secondLine = Console.ReadLine();
+		string [] secondList = secondLine.Split(' ');
+		List<int> second = new List<int> {};
+		
+		foreach (string number in secondList)
+		{
+			second.Add(int.Parse(number));
+		}
+		 List<int> newList = new List<int> { };
+            foreach (int number in first)
+            {
+                if (!newList.Contains(number))
+                {
+                    newList.Add(number);
+                }
+            }
+            foreach (int number in second)
+            {
+                if (!newList.Contains(number))
+                {
+                    newList.Add(number);
+                }
+            }
+            newList.Sort();
+            
+            foreach (int number in newList)
+            {
+                Console.Write(number + " ");
+            }
+	}
+}
