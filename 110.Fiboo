@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+
+  public class Fibonacci	  
+  {
+	public static int Fibo (int n)
+	 {
+	 	int n1=0;
+		int n2=1;
+		int sum = 0;
+		for (int index =0; index < n ;index ++)
+		{
+			sum = n1+n2;
+			n1=n2;
+			n2=sum;
+		}
+		return sum;
+	 }
+	public static void Main()
+	 {
+	 int n=int.Parse(Console.ReadLine());
+		Console.WriteLine(Fibonacci.Fibo(n));
+	 }
+	
+  }
