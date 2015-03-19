@@ -1,0 +1,18 @@
+using System;
+
+    public class Dates
+    {
+       public static void Main()
+	    {
+		  DateTime startingDate =  DateTime.Parse(Console.ReadLine());
+		  DateTime endDate = DateTime.Parse(Console.ReadLine());
+		  
+		  Console.WriteLine(diffBetweenDates(startingDate,endDate));
+	    }
+		  public static int diffBetweenDates (DateTime startingDate, DateTime endDate)
+	  	{
+			TimeSpan diff = endDate - startingDate ;
+			return int.Parse(diff.TotalDays.ToString());
+		  }
+    }
+
