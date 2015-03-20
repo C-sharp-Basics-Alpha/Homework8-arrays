@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+   public  class Point
+   {
+		 public int X {get;set;}
+		 public int Y {get;set;}
+		 		
+		 public void PrintPoint()
+		 {
+			 Console.WriteLine("x:{0}, y:{1}",X,Y);
+		 }
+   }
+	public	class MainClass
+		{
+		 public static void Main()
+		 {
+					
+			Point a = new Point();
+			Point b = new Point();
+		 	a.X = 20;
+			a.Y = 30;
+			b.X = 0;
+			b.Y = 100;
+			 
+			a.PrintPoint();
+			b.PrintPoint();
+		 }
+		}
+		
+    
+
